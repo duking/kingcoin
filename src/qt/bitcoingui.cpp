@@ -505,7 +505,7 @@ void BitcoinGUI::setNumConnections(int count)
     case 7: case 8: case 9: icon = ":/icons/connect_3"; break;
     default: icon = ":/icons/connect_4"; break;
     }
-    labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+    labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSKNC_ICONSIZE,STATUSKNC_ICONSIZE));
     labelConnectionsIcon->setToolTip(tr("%n active connection(s) to kingcoin network", "", count));
 }
 
@@ -590,7 +590,7 @@ void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
     if(secs < 90*60 && count >= nTotalBlocks)
     {
         tooltip = tr("Up to date") + QString(".<br>") + tooltip;
-        labelBlocksIcon->setPixmap(QIcon(":/icons/synced").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
+        labelBlocksIcon->setPixmap(QIcon(":/icons/synced").pixmap(STATUSKNC_ICONSIZE, STATUSKNC_ICONSIZE));
 
         overviewPage->showOutOfSyncWarning(false);
     }
@@ -621,12 +621,12 @@ void BitcoinGUI::setMining(bool mining, int hashrate)
 {
     if (mining)
     {
-        labelMiningIcon->setPixmap(QIcon(":/icons/mining_active").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+        labelMiningIcon->setPixmap(QIcon(":/icons/mining_active").pixmap(STATUSKNC_ICONSIZE,STATUSKNC_ICONSIZE));
         labelMiningIcon->setToolTip(tr("Mining kingcoin at %1 hashes per second").arg(hashrate));
     }
     else
     {
-        labelMiningIcon->setPixmap(QIcon(":/icons/mining_inactive").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+        labelMiningIcon->setPixmap(QIcon(":/icons/mining_inactive").pixmap(STATUSKNC_ICONSIZE,STATUSKNC_ICONSIZE));
         labelMiningIcon->setToolTip(tr("Not mining kingcoin"));
     }
 }
@@ -872,7 +872,7 @@ void BitcoinGUI::setEncryptionStatus(int status)
         break;
     case WalletModel::Unlocked:
         labelEncryptionIcon->show();
-        labelEncryptionIcon->setPixmap(QIcon(":/icons/lock_open").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+        labelEncryptionIcon->setPixmap(QIcon(":/icons/lock_open").pixmap(STATUSKNC_ICONSIZE,STATUSKNC_ICONSIZE));
         labelEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>unlocked</b>"));
         encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);
@@ -880,7 +880,7 @@ void BitcoinGUI::setEncryptionStatus(int status)
         break;
     case WalletModel::Locked:
         labelEncryptionIcon->show();
-        labelEncryptionIcon->setPixmap(QIcon(":/icons/lock_closed").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+        labelEncryptionIcon->setPixmap(QIcon(":/icons/lock_closed").pixmap(STATUSKNC_ICONSIZE,STATUSKNC_ICONSIZE));
         labelEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>locked</b>"));
         encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);

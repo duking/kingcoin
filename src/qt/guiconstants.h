@@ -8,7 +8,7 @@ static const int MODEL_UPDATE_DELAY = 500;
 static const int MAX_PASSPHRASE_SIZE = 1024;
 
 /* BitcoinGUI -- Size of icons in status bar */
-static const int STATUSBAR_ICONSIZE = 16;
+static const int STATUSKNC_ICONSIZE = 16;
 
 /* Invalid field background style */
 #define STYLE_INVALID "background:#FF8080"
@@ -18,7 +18,7 @@ static const int STATUSBAR_ICONSIZE = 16;
 /* Transaction list -- negative amount */
 #define COLOR_NEGATIVE QColor(255, 0, 0)
 /* Transaction list -- bare address (without label) */
-#define COLOR_BAREADDRESS QColor(140, 140, 140)
+#define COLOR_KNCEADDRESS QColor(140, 140, 140)
 
 /* Tooltips longer than this (in characters) are converted into rich text,
    so that they can be word-wrapped.
